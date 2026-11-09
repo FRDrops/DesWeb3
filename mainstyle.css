@@ -1,0 +1,51 @@
+body{
+    background-color: pink; /*BG Color*/
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container .box1 {
+    grid-column: span 3;
+    border-radius: 15%;
+    text-align: center;
+    padding: 10px;
+    background-color: plum; /*Box Color*/
+}
+
+.inner-container {
+  display: grid;
+  grid-column: span 3;
+  grid-template-columns: subgrid;
+}
+
+.box {
+    text-align: center;
+    padding: 10px;
+    background-color: plum; /*Box Color*/
+    border-radius: 15%;
+    font-weight: bold;
+}
+.box2 {
+    background-color: white; /*Box Color*/
+    border-radius: 15%;
+    margin: 5px;
+    display: flex;
+}
+.icons {
+    background-color: plum;
+    padding: 5px;
+    margin: 5px;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+button{
+    height: 50px;
+    border-radius: 15%;
+}
