@@ -9,7 +9,7 @@ body{
   margin-top: 20px;
 }
 
-.container .box1 {
+.box1 {
     grid-column: span 3;
     border-radius: 15%;
     text-align: center;
@@ -48,4 +48,16 @@ body{
 button{
     height: 50px;
     border-radius: 15%;
+}
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: pink;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
 }
