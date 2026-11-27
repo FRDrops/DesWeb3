@@ -1,0 +1,114 @@
+/**
+ * Design Tokens & Sistem Tema SORA
+ * Mengacu pada PRD v2 Bagian 8 (Palet & Kontras, Implementasi Tema, Tipografi)
+ */
+
+:root {
+  /* Palet Dasar Netral (PRD 8.1) */
+  --cream: #fff1e8;
+  --ink: #1f2937;
+  --ink-muted: #4b5563;
+  --surface: #ffffff;
+  --surface-subtle: #fff8f3;
+  --border-subtle: rgba(31, 41, 55, 0.14);
+  --border-strong: rgba(31, 41, 55, 0.28);
+
+  /* Token Warna Biru (PRD 8.1) */
+  --blue-600: #2563f5;
+  --blue-text: #1d4ed8;
+  --blue-500: #1a9bea; /* Dekorasi/ikon saja — dilarang untuk teks */
+  --blue-100: #b8eefa;
+
+  /* Token Warna Pink (PRD 8.1) */
+  --pink-500: #ff96b8; /* Wajib teks gelap --ink di atasnya */
+  --pink-text: #b83266;
+  --pink-200: #fdcbc8;
+
+  /* Token Mode "Semua Topik" (Netral) */
+  --neutral-accent: #6d28d9;
+  --neutral-text: #5b21b6;
+  --neutral-soft: #ede9fe;
+  --neutral-gradient: linear-gradient(135deg, #fdcbc8 0%, #ede9fe 52%, #b8eefa 100%);
+
+  /* Token Keselamatan & Status */
+  --help-bg: #0f766e;
+  --help-on: #ffffff;
+  --help-hover: #115e59;
+  --exit-bg: #ffffff;
+  --exit-text: #1f2937;
+  --exit-border: #9ca3af;
+  --danger-text: #b91c1c;
+  --danger-soft: #fee2e2;
+
+  /* Default Theme ("all" — Semua Topik) */
+  --bg-page: var(--cream);
+  --bg-hero-decor: var(--neutral-gradient);
+  --accent: var(--neutral-accent);
+  --accent-on: #ffffff;
+  --accent-soft: var(--neutral-soft);
+  --accent-text: var(--neutral-text);
+  --decor-only: #8b5cf6;
+
+  /* Tipografi (PRD 8.3 + Gaya Editorial) */
+  --font-heading: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;     /* 16px minimum PRD */
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+
+  /* Layout & Editorial Rhythm */
+  --container-max: 1160px;
+  --measure-article: 65ch;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+
+  /* Bentuk & Elevasi */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 2px 12px rgba(31, 41, 55, 0.06);
+  --shadow-modal: 0 20px 50px rgba(31, 41, 55, 0.22);
+
+  /* Transisi Tema (PRD 8.2 & F5: +-600ms tanpa layout shift) */
+  --transition-theme: 600ms ease;
+  --transition-fast: 180ms ease;
+}
+
+/* Tema Jalur Pink (PRD 8.1 & 8.2) */
+html[data-theme='pink'] {
+  --bg-hero-decor: linear-gradient(135deg, #fdcbc8 0%, #fff1e8 100%);
+  --accent: var(--pink-500);
+  --accent-on: var(--ink); /* Aturan PRD: tombol pink wajib memakai teks gelap */
+  --accent-soft: var(--pink-200);
+  --accent-text: var(--pink-text);
+  --decor-only: var(--pink-500);
+}
+
+/* Tema Jalur Biru (PRD 8.1 & 8.2) */
+html[data-theme='blue'] {
+  --bg-hero-decor: linear-gradient(135deg, #b8eefa 0%, #fff1e8 100%);
+  --accent: var(--blue-600);
+  --accent-on: #ffffff;
+  --accent-soft: var(--blue-100);
+  --accent-text: var(--blue-text);
+  --decor-only: var(--blue-500);
+}
+
+/* Hormati prefers-reduced-motion (PRD 8.2 & 12) */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-theme: 0ms linear;
+    --transition-fast: 0ms linear;
+  }
+}

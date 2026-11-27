@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="id" data-theme="all">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Katalog 19 artikel edukasi kesehatan remaja SORA dengan grid editorial, pencarian, dan filter kategori."
+    />
+    <title>Katalog Artikel — SORA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('sora_user_state');
+          if (!raw) return;
+          var parsed = JSON.parse(raw);
+          if (parsed && (parsed.path === 'pink' || parsed.path === 'blue' || parsed.path === 'all')) {
+            document.documentElement.dataset.theme = parsed.path;
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <a href="index.html" class="brand-link" aria-label="Beranda SORA">
+            <span class="brand-mark" aria-hidden="true">S</span>
+            <span class="brand-text">
+              <span class="brand-name">SORA</span>
+              <span class="brand-tag">Ruang Aman Remaja</span>
+            </span>
+          </a>
+
+          <nav class="desktop-nav" aria-label="Navigasi utama">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Beranda</a></li>
+              <li><a href="artikel.html" class="nav-link is-active" aria-current="page">Artikel</a></li>
+              <li><a href="health-check.html" class="nav-link">Health Check</a></li>
+              <li><a href="myth-buster.html" class="nav-link">Myth Buster</a></li>
+              <li><a href="tanya-anonim.html" class="nav-link">Tanya Anonim &amp; FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-actions">
+          <div class="path-switcher desktop-only" role="group" aria-label="Pilih jalur topik">
+            <button type="button" class="path-pill" data-path-option="all" aria-pressed="false">Semua</button>
+            <button type="button" class="path-pill" data-path-option="pink" aria-pressed="false">Jalur Pink</button>
+            <button type="button" class="path-pill" data-path-option="blue" aria-pressed="false">Jalur Biru</button>
+          </div>
+
+          <div class="safety-actions">
+            <a href="bantuan.html" class="btn btn-help btn-compact">
+              <span aria-hidden="true">&#10084;&#65039;</span>
+              <span>Butuh Bantuan?</span>
+            </a>
+            <a
+              href="https://www.google.com"
+              class="btn btn-exit btn-compact"
+              data-quick-exit="https://www.google.com"
+              rel="noopener noreferrer"
+            >
+              <span>Keluar Cepat</span>
+            </a>
+          </div>
+
+          <button
+            type="button"
+            class="hamburger-btn"
+            id="mobile-menu-toggle"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+            aria-label="Buka menu navigasi"
+          >
+            <span class="hamburger-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav-drawer" class="mobile-drawer" hidden>
+        <div class="container mobile-drawer-inner">
+          <div class="mobile-path-section">
+            <p class="mobile-drawer-label">Pilih Jalur Topik</p>
+            <div class="path-switcher mobile-path-switcher" role="group" aria-label="Pilih jalur topik di menu">
+              <button type="button" class="path-pill" data-path-option="all" aria-pressed="false">Semua</button>
+              <button type="button" class="path-pill" data-path-option="pink" aria-pressed="false">Jalur Pink</button>
+              <button type="button" class="path-pill" data-path-option="blue" aria-pressed="false">Jalur Biru</button>
+            </div>
+          </div>
+
+          <nav aria-label="Navigasi seluler">
+            <ul class="mobile-nav-list">
+              <li><a href="index.html" class="mobile-nav-link">Beranda</a></li>
+              <li><a href="artikel.html" class="mobile-nav-link is-active" aria-current="page">Artikel</a></li>
+              <li><a href="health-check.html" class="mobile-nav-link">Health Check</a></li>
+              <li><a href="myth-buster.html" class="mobile-nav-link">Myth Buster</a></li>
+              <li><a href="tanya-anonim.html" class="mobile-nav-link">Tanya Anonim &amp; FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="editorial-kicker">Katalog Editorial SORA</span>
+          <h1>Baca Artikel Kesehatan Remaja</h1>
+          <p class="page-hero-lead" id="catalog-path-hint">
+            Menampilkan seluruh 19 artikel awal (7 Konten Inti, 6 Jalur Pink, dan 6 Jalur Biru) yang tenang,
+            ringkas, dan mencantumkan sumber resmi.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container">
+          <div class="catalog-controls">
+            <div class="search-row">
+              <div class="search-input-wrap">
+                <label for="article-search" class="sr-only">Cari topik atau kata kunci artikel</label>
+                <input
+                  id="article-search"
+                  type="search"
+                  class="search-input"
+                  placeholder="Cari topik (misal: tidur, haid, jerawat, stres)..."
+                />
+              </div>
+              <p id="articles-count" class="catalog-count">Menampilkan 19 dari 19 artikel</p>
+            </div>
+
+            <div class="filter-pills" role="group" aria-label="Filter kategori artikel">
+              <button type="button" class="filter-pill" data-category-filter="Semua" aria-pressed="true">Semua</button>
+              <button type="button" class="filter-pill" data-category-filter="Gizi" aria-pressed="false">Gizi</button>
+              <button type="button" class="filter-pill" data-category-filter="Tidur" aria-pressed="false">Tidur</button>
+              <button type="button" class="filter-pill" data-category-filter="Mental" aria-pressed="false">Mental</button>
+              <button type="button" class="filter-pill" data-category-filter="Pubertas" aria-pressed="false">Pubertas</button>
+              <button type="button" class="filter-pill" data-category-filter="Haid" aria-pressed="false">Haid</button>
+              <button type="button" class="filter-pill" data-category-filter="Tubuh & Olahraga" aria-pressed="false">Tubuh &amp; Olahraga</button>
+              <button type="button" class="filter-pill" data-category-filter="Kebersihan" aria-pressed="false">Kebersihan</button>
+              <button type="button" class="filter-pill" data-category-filter="Rokok & NAPZA" aria-pressed="false">Rokok &amp; NAPZA</button>
+              <button type="button" class="filter-pill" data-category-filter="Reproduksi" aria-pressed="false">Reproduksi</button>
+            </div>
+          </div>
+
+          <div id="articles-grid" class="editorial-grid">
+            <!-- 7 KONTEN INTI -->
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Gizi" data-search="gizi seimbang remaja isi piringku makan zat besi tanpa kalori">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Gizi</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/gizi-seimbang-remaja.html">Gizi Seimbang Remaja Tanpa Ribet Hitung Kalori</a></h2>
+              <p class="article-card-excerpt">Kenali porsi piring makan harian yang bikin tubuh bertenaga di masa sekolah tanpa angka berat badan atau kalori.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="inti/gizi-seimbang-remaja.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Tidur" data-search="tidur berkualitas screen time hp malam begadang remaja">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Tidur</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/tidur-dan-screen-time.html">Tidur Cukup &amp; Mengatur Screen Time Saat Banyak Tugas</a></h2>
+              <p class="article-card-excerpt">Kenapa scroll malam bikin mata tetap melek dan cara realistis bikin jadwal tidur lebih nyenyak.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="inti/tidur-dan-screen-time.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Mental" data-search="kesehatan mental stres ujian cemas curhat remaja">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Mental</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/kesehatan-mental-remaja.html">Merawat Kesehatan Mental Saat Kepala Terasa Penuh</a></h2>
+              <p class="article-card-excerpt">Membedakan stres harian yang wajar dengan tanda bahwa kamu butuh teman bicara atau pendampingan.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="inti/kesehatan-mental-remaja.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Tubuh & Olahraga" data-search="aktivitas fisik olahraga harian jalan kaki peregangan fokus">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Tubuh &amp; Olahraga</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/aktivitas-fisik-harian.html">Aktivitas Fisik Harian untuk Suasana Hati &amp; Fokus Belajar</a></h2>
+              <p class="article-card-excerpt">Gerak tubuh tidak harus olahraga berat—jalan kaki, peregangan, dan hobi aktif juga dihitung.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="inti/aktivitas-fisik-harian.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Rokok & NAPZA" data-search="bahaya rokok vape nikotin napza ketergantungan paru otak">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Rokok &amp; NAPZA</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/bahaya-rokok-vape-napza.html">Fakta di Balik Rokok, Vape Rasa Buah, dan NAPZA</a></h2>
+              <p class="article-card-excerpt">Mengapa nikotin dalam rokok maupun vape cepat memicu ketergantungan pada otak remaja yang masih berkembang.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="inti/bahaya-rokok-vape-napza.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Kebersihan" data-search="kebersihan diri mandi keringat bau badan gigi pubertas">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Kebersihan</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/kebersihan-diri-remaja.html">Kebersihan Diri Saat Produksi Keringat &amp; Minyak Meningkat</a></h2>
+              <p class="article-card-excerpt">Panduan praktis merawat kebersihan badan, ketiak, gigi, dan pakaian saat memasuki fase pubertas.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="inti/kebersihan-diri-remaja.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="inti" data-category="Reproduksi" data-search="kesehatan reproduksi dasar batas tubuh persetujuan aman smp sma">
+              <div class="article-card-meta">
+                <span class="badge badge-path-inti">Konten Inti</span>
+                <span class="badge badge-cat">Reproduksi</span>
+              </div>
+              <h2 class="article-card-title"><a href="inti/kesehatan-reproduksi-dasar.html">Mengenal Kesehatan Reproduksi Dasar &amp; Batas Tubuh Pribadi</a></h2>
+              <p class="article-card-excerpt">Memahami fungsi tubuh sendiri, menjaga kebersihan, dan hak atas persetujuan serta batas tubuh yang aman.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="inti/kesehatan-reproduksi-dasar.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <!-- 6 KONTEN PINK -->
+            <article class="editorial-card article-card" data-article-card data-path="pink" data-category="Haid" data-search="siklus menstruasi haid mitos es keramas teratur">
+              <div class="article-card-meta">
+                <span class="badge badge-path-pink">Jalur Pink</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Haid</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/siklus-menstruasi-mitos.html">Siklus Menstruasi dan Mitos yang Sering Bikin Panik</a></h2>
+              <p class="article-card-excerpt">Penjelasan tenang soal siklus haid yang belum teratur di awal pubertas serta mitos minuman dingin atau keramas.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="jalur/siklus-menstruasi-mitos.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="pink" data-category="Haid" data-search="nyeri haid kram perut kompres hangat dokter">
+              <div class="article-card-meta">
+                <span class="badge badge-path-pink">Jalur Pink</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Haid</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/nyeri-haid-kapan-ke-dokter.html">Nyeri Haid: Cara Meredakan di Rumah &amp; Kapan ke Dokter</a></h2>
+              <p class="article-card-excerpt">Kram perut ringan saat haid tergolong umum, tetapi ada tanda-tanda tertentu yang perlu diperiksa tenaga kesehatan.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/nyeri-haid-kapan-ke-dokter.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="pink" data-category="Gizi" data-search="anemia zat besi lemas pusing tablet tambah darah haid">
+              <div class="article-card-meta">
+                <span class="badge badge-path-pink">Jalur Pink</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Gizi</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/anemia-dan-zat-besi.html">Anemia pada Remaja Putri &amp; Pentingnya Zat Besi</a></h2>
+              <p class="article-card-excerpt">Kenapa mudah lemas, pusing, dan sulit konsentrasi saat haid bisa berkaitan dengan kurang darah (anemia).</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/anemia-dan-zat-besi.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="pink" data-category="Kebersihan" data-search="kebersihan area kewanitaan pembalut keputihan ganti sekolah">
+              <div class="article-card-meta">
+                <span class="badge badge-path-pink">Jalur Pink</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Kebersihan</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/kebersihan-kewanitaan-pembalut.html">Merawat Area Kewanitaan &amp; Memilih Pembalut yang Nyaman</a></h2>
+              <p class="article-card-excerpt">Cara membersihkan tanpa sabun berpewangi keras dan jadwal mengganti pembalut di sekolah.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/kebersihan-kewanitaan-pembalut.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="pink" data-category="Pubertas" data-search="perubahan tubuh pubertas perempuan jerawat hormonal wajah">
+              <div class="article-card-meta">
+                <span class="badge badge-path-pink">Jalur Pink</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Pubertas</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/perubahan-tubuh-jerawat-pink.html">Perubahan Tubuh Remaja Putri &amp; Jerawat Hormonal</a></h2>
+              <p class="article-card-excerpt">Setiap tubuh berkembang dengan ritmenya sendiri; kenali perubahan hormon dan perawatan wajah sederhana.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/perubahan-tubuh-jerawat-pink.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="pink" data-category="Mental" data-search="body image bentuk tubuh gangguan makan cemas media sosial">
+              <div class="article-card-meta">
+                <span class="badge badge-path-pink">Jalur Pink</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Mental</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/body-image-gangguan-makan.html">Beragam Bentuk Tubuh &amp; Mengenali Tanda Awal Gangguan Makan</a></h2>
+              <p class="article-card-excerpt">Mengapa membandingkan diri dengan media sosial melelahkan, serta tanda kapan rasa cemas soal makan butuh bantuan.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="jalur/body-image-gangguan-makan.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <!-- 6 KONTEN BIRU -->
+            <article class="editorial-card article-card" data-article-card data-path="blue" data-category="Pubertas" data-search="pubertas laki laki suara pecah tinggi badan mimpi basah">
+              <div class="article-card-meta">
+                <span class="badge badge-path-blue">Jalur Biru</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Pubertas</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/pubertas-suara-mimpi-basah.html">Pubertas Laki-Laki: Suara Pecah, Tinggi Badan &amp; Mimpi Basah</a></h2>
+              <p class="article-card-excerpt">Apa yang sebenarnya terjadi pada tubuh saat suara mulai berubah dan mengalami mimpi basah pertama.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="jalur/pubertas-suara-mimpi-basah.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="blue" data-category="Reproduksi" data-search="kebersihan organ reproduksi laki laki sunat sirkumsisi">
+              <div class="article-card-meta">
+                <span class="badge badge-path-blue">Jalur Biru</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Reproduksi</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/kebersihan-reproduksi-sunat.html">Kebersihan Organ Reproduksi Laki-Laki dan Fakta Seputar Sunat</a></h2>
+              <p class="article-card-excerpt">Langkah sederhana menjaga kebersihan harian agar terhindar dari iritasi, baik yang sudah maupun belum sunat.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/kebersihan-reproduksi-sunat.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="blue" data-category="Kebersihan" data-search="jerawat remaja laki laki perawatan kulit berminyak olahraga">
+              <div class="article-card-meta">
+                <span class="badge badge-path-blue">Jalur Biru</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Kebersihan</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/jerawat-perawatan-kulit-biru.html">Jerawat Remaja Laki-Laki &amp; Perawatan Kulit Dasar Tanpa Ribet</a></h2>
+              <p class="article-card-excerpt">Mengelola kulit berminyak setelah olahraga tanpa perlu produk berlapis atau memencet jerawat.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/jerawat-perawatan-kulit-biru.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="blue" data-category="Mental" data-search="kesehatan mental laki laki boleh cerita menangis emosi gengsi">
+              <div class="article-card-meta">
+                <span class="badge badge-path-blue">Jalur Biru</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Mental</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/kesehatan-mental-laki-laki.html">Kesehatan Mental Laki-Laki: Kamu Boleh Cerita</a></h2>
+              <p class="article-card-excerpt">Menangis, cemas, atau merasa tertekan bukan tanda kelemahan; mengenali emosi dan cara aman bercerita.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="jalur/kesehatan-mental-laki-laki.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="blue" data-category="Tubuh & Olahraga" data-search="olahraga aman suplemen steroid otot gym remaja">
+              <div class="article-card-meta">
+                <span class="badge badge-path-blue">Jalur Biru</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Tubuh &amp; Olahraga</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/olahraga-aman-suplemen-steroid.html">Olahraga Aman &amp; Risiko Suplemen Pembentuk Otot atau Steroid</a></h2>
+              <p class="article-card-excerpt">Membangun kebugaran sesuai usia pertumbuhan tanpa tergoda klaim instan suplemen ilegal atau steroid.</p>
+              <div class="article-card-footer">
+                <span>4 menit baca</span>
+                <a href="jalur/olahraga-aman-suplemen-steroid.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+
+            <article class="editorial-card article-card" data-article-card data-path="blue" data-category="Rokok & NAPZA" data-search="tekanan pergaulan teman sebaya menolak rokok tawuran">
+              <div class="article-card-meta">
+                <span class="badge badge-path-blue">Jalur Biru</span>
+                <span class="badge badge-rec" data-rec-badge hidden>Sesuai Jalurmu</span>
+                <span class="badge badge-cat">Rokok &amp; NAPZA</span>
+              </div>
+              <h2 class="article-card-title"><a href="jalur/tekanan-pergaulan-rokok-tawuran.html">Menghadapi Tekanan Pergaulan: Ajakan Merokok hingga Tawuran</a></h2>
+              <p class="article-card-excerpt">Strategi menolak ajakan berisiko di lingkungan teman sebaya tanpa kehilangan rasa percaya diri.</p>
+              <div class="article-card-footer">
+                <span>3 menit baca</span>
+                <a href="jalur/tekanan-pergaulan-rokok-tawuran.html">Baca artikel &rarr;</a>
+              </div>
+            </article>
+          </div>
+
+          <div id="articles-empty" class="editorial-card empty-state" hidden>
+            <h2>Artikel tidak ditemukan</h2>
+            <p>Coba kata kunci lain atau ubah filter kategori ke “Semua”.</p>
+            <button type="button" id="reset-article-filters" class="btn btn-primary">Reset Pencarian &amp; Filter</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <span class="footer-mark" aria-hidden="true">S</span>
+            <strong class="footer-name">SORA</strong>
+          </div>
+          <p class="footer-desc">
+            Platform edukasi kesehatan remaja (12–18 tahun) yang tenang, tidak menghakimi, dan
+            berbasis sumber resmi. Tanpa login, tanpa pelacak iklan.
+          </p>
+          <p class="footer-note">
+            Informasi di SORA bersifat edukasi dan bukan pengganti diagnosis atau konsultasi medis.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Jelajah Fitur</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="artikel.html">Katalog Artikel</a></li>
+            <li><a href="health-check.html">Health Check Mini</a></li>
+            <li><a href="myth-buster.html">Myth Buster</a></li>
+            <li><a href="tanya-anonim.html">Tanya Anonim &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Sumber &amp; Privasi</h2>
+          <ul class="footer-links">
+            <li><a href="sumber.html">Pusat Sumber Rujukan</a></li>
+            <li><a href="tentang.html">Tentang SORA</a></li>
+            <li><a href="tentang.html#privasi">Kebijakan Privasi Remaja</a></li>
+            <li><a href="tentang.html#disclaimer">Disclaimer Medis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-safety">
+          <h2 class="footer-heading">Bantuan &amp; Kontrol Data</h2>
+          <div class="footer-action-stack">
+            <a href="bantuan.html" class="btn btn-help">Butuh Bantuan?</a>
+            <button type="button" class="btn btn-secondary" data-clear-data>Hapus data saya</button>
+            <a
+              href="https://www.google.com"
+              class="btn btn-exit"
+              data-quick-exit="https://www.google.com"
+              rel="noopener noreferrer"
+            >
+              Keluar Cepat
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SORA — Ruang Aman Edukasi Kesehatan Remaja Indonesia.</p>
+        <p>Konten ditinjau berkala oleh tim dan peninjau kesehatan.</p>
+      </div>
+    </footer>
+
+    <div
+      id="sora-modal"
+      class="modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="sora-modal-title"
+      aria-describedby="sora-modal-desc"
+      hidden
+    >
+      <div class="modal-panel" tabindex="-1">
+        <div class="modal-header">
+          <h2 id="sora-modal-title" class="modal-title">Pemberitahuan</h2>
+          <button type="button" class="modal-close" data-modal-close aria-label="Tutup jendela pemberitahuan">&times;</button>
+        </div>
+        <div id="sora-modal-desc" class="modal-body"></div>
+        <div id="sora-modal-help" class="modal-help-box" hidden>
+          <p>Jika kamu sedang berada dalam bahaya atau butuh teman bicara sekarang, jangan ragu untuk segera mencari pendampingan.</p>
+          <a href="bantuan.html" class="btn btn-help">Butuh Bantuan?</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-modal-cancel hidden>Batal</button>
+          <button type="button" class="btn btn-primary" data-modal-confirm>Mengerti</button>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/site-config.js"></script>
+    <script defer src="js/theme-state.js"></script>
+    <script defer src="js/ui-shell.js"></script>
+    <script defer src="js/articles-page.js"></script>
+  </body>
+</html>

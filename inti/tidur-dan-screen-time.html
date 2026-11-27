@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="id" data-theme="all" data-base="..">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cara mengatur jadwal tidur remaja dan screen time tanpa merasa bersalah." />
+    <title>Tidur Cukup &amp; Mengatur Screen Time Saat Banyak Tugas — SORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('sora_user_state');
+          if (!raw) return;
+          var parsed = JSON.parse(raw);
+          if (parsed && (parsed.path === 'pink' || parsed.path === 'blue' || parsed.path === 'all')) {
+            document.documentElement.dataset.theme = parsed.path;
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <a href="../index.html" class="brand-link" aria-label="Beranda SORA"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-text"><span class="brand-name">SORA</span><span class="brand-tag">Ruang Aman Remaja</span></span></a>
+          <nav class="desktop-nav" aria-label="Navigasi utama">
+            <ul class="nav-list">
+              <li><a href="../index.html" class="nav-link">Beranda</a></li>
+              <li><a href="../artikel.html" class="nav-link is-active" aria-current="page">Artikel</a></li>
+              <li><a href="../health-check.html" class="nav-link">Health Check</a></li>
+              <li><a href="../myth-buster.html" class="nav-link">Myth Buster</a></li>
+              <li><a href="../tanya-anonim.html" class="nav-link">Tanya Anonim &amp; FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <div class="path-switcher desktop-only" role="group" aria-label="Pilih jalur topik">
+            <button type="button" class="path-pill" data-path-option="all" aria-pressed="false">Semua</button>
+            <button type="button" class="path-pill" data-path-option="pink" aria-pressed="false">Jalur Pink</button>
+            <button type="button" class="path-pill" data-path-option="blue" aria-pressed="false">Jalur Biru</button>
+          </div>
+          <div class="safety-actions">
+            <a href="../bantuan.html" class="btn btn-help btn-compact"><span aria-hidden="true">&#10084;&#65039;</span><span>Butuh Bantuan?</span></a>
+            <a href="https://www.google.com" class="btn btn-exit btn-compact" data-quick-exit="https://www.google.com" rel="noopener noreferrer"><span>Keluar Cepat</span></a>
+          </div>
+          <button type="button" class="hamburger-btn" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Buka menu navigasi">
+            <span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-nav-drawer" class="mobile-drawer" hidden>
+        <div class="container mobile-drawer-inner">
+          <div class="mobile-path-section">
+            <p class="mobile-drawer-label">Pilih Jalur Topik</p>
+            <div class="path-switcher mobile-path-switcher" role="group" aria-label="Pilih jalur topik di menu">
+              <button type="button" class="path-pill" data-path-option="all" aria-pressed="false">Semua</button>
+              <button type="button" class="path-pill" data-path-option="pink" aria-pressed="false">Jalur Pink</button>
+              <button type="button" class="path-pill" data-path-option="blue" aria-pressed="false">Jalur Biru</button>
+            </div>
+          </div>
+          <nav aria-label="Navigasi seluler">
+            <ul class="mobile-nav-list">
+              <li><a href="../index.html" class="mobile-nav-link">Beranda</a></li>
+              <li><a href="../artikel.html" class="mobile-nav-link is-active" aria-current="page">Artikel</a></li>
+              <li><a href="../health-check.html" class="mobile-nav-link">Health Check</a></li>
+              <li><a href="../myth-buster.html" class="mobile-nav-link">Myth Buster</a></li>
+              <li><a href="../tanya-anonim.html" class="mobile-nav-link">Tanya Anonim &amp; FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <nav class="article-breadcrumb" aria-label="Breadcrumb">
+            <a href="../artikel.html">Katalog Artikel</a><span aria-hidden="true">/</span><span>Konten Inti · Tidur</span>
+          </nav>
+          <h1>Tidur Cukup &amp; Mengatur Screen Time Saat Banyak Tugas</h1>
+          <div class="article-meta-bar">
+            <span class="badge badge-path-inti">Konten Inti</span>
+            <span class="review-status-pill">Tanggal tinjau: 27 November 2026</span>
+            <span class="review-status-pill">Status: Draf edukasi — menunggu tinjauan tenaga kesehatan</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container article-layout">
+          <article class="article-body">
+            <h2>Kenapa Jam Tidur Remaja Bergeser Lebih Malam?</h2>
+            <p>
+              Saat memasuki masa remaja, jam biologis tubuh (<em>ritme sirkadian</em>—pengatur rasa
+              kantuk alami tubuh) memang bergeser sedikit lebih malam dibanding anak-anak. Itu sebabnya
+              kamu sering baru mengantuk di atas jam 10 malam, padahal sekolah tetap mulai pagi.
+            </p>
+            <p>
+              Umumnya remaja usia 12–18 tahun membutuhkan sekitar 8–10 jam tidur per malam untuk
+              memulihkan tubuh, merapikan memori pelajaran, dan menjaga emosi tetap stabil.
+            </p>
+
+            <h2>Efek Layar Ponsel Sebelum Tidur</h2>
+            <p>
+              Cahaya terang dari layar ponsel dan konten video pendek yang terus bergulir membuat otak
+              mengira hari masih siang. Produksi <em>melatonin</em> (hormon pengantar tidur) pun
+              melambat, sehingga rasa kantuk tertunda meski tubuh sebenarnya sudah lelah.
+            </p>
+
+            <h2>Langkah Realistis yang Bisa Dicoba</h2>
+            <ul>
+              <li><strong>Aturan 20–30 menit sebelum tidur:</strong> Turunkan kecerahan layar, aktifkan mode malam, atau letakkan ponsel sedikit jauh dari jangkauan kasur.</li>
+              <li><strong>Siapkan batas waktu tugas:</strong> Jika harus begadang karena ujian, usahakan tetap ada jeda tidur daripada memaksakan semalaman penuh.</li>
+              <li><strong>Jaga jam bangun stabil:</strong> Menggeser jam tidur sedikit lebih awal 15 menit tiap beberapa hari jauh lebih mudah daripada langsung mengubah jadwal secara drastis.</li>
+            </ul>
+
+            <div class="feedback-card" data-article-feedback data-article-slug="tidur-dan-screen-time">
+              <h3>Apakah artikel ini membantu?</h3>
+              <div class="feedback-actions">
+                <button type="button" class="btn btn-secondary" data-vote="up" aria-pressed="false">&#128077; Membantu</button>
+                <button type="button" class="btn btn-secondary" data-vote="down" aria-pressed="false">&#128078; Kurang jelas</button>
+              </div>
+              <p class="feedback-status" data-feedback-status aria-live="polite"></p>
+            </div>
+          </article>
+
+          <aside class="article-sidebar">
+            <div class="intinya-box">
+              <h2>Intinya</h2>
+              <ul>
+                <li>Remaja umumnya butuh 8–10 jam tidur tiap malam.</li>
+                <li>Layar ponsel menjelang tidur menunda hormon kantuk (<em>melatonin</em>).</li>
+                <li>Kurangi layar 20–30 menit sebelum tidur agar otak lebih mudah rileks.</li>
+              </ul>
+            </div>
+            <div class="editorial-card">
+              <h3>Sumber Rujukan</h3>
+              <ul class="reference-list">
+                <li>WHO — <em>Guidelines on Physical Activity, Sedentary Behaviour and Sleep</em>.</li>
+                <li>IDAI — Kebutuhan Tidur Anak &amp; Remaja.</li>
+              </ul>
+              <a href="../sumber.html">Lihat Pusat Sumber &rarr;</a>
+            </div>
+            <div class="editorial-card">
+              <h3>Baca Juga Jalur Lain</h3>
+              <ul class="reference-list">
+                <li><a href="../health-check.html">Cek Energi Maskot &amp; Pola Tidurmu di Health Check</a></li>
+                <li><a href="kesehatan-mental-remaja.html">Merawat Kesehatan Mental Remaja</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row"><span class="footer-mark" aria-hidden="true">S</span><strong class="footer-name">SORA</strong></div>
+          <p class="footer-desc">Platform edukasi kesehatan remaja (12–18 tahun) yang tenang, tidak menghakimi, dan berbasis sumber resmi. Tanpa login, tanpa pelacak iklan.</p>
+          <p class="footer-note">Informasi di SORA bersifat edukasi dan bukan pengganti diagnosis atau konsultasi medis.</p>
+        </div>
+        <div><h2 class="footer-heading">Jelajah Fitur</h2><ul class="footer-links"><li><a href="../index.html">Beranda</a></li><li><a href="../artikel.html">Katalog Artikel</a></li><li><a href="../health-check.html">Health Check Mini</a></li><li><a href="../myth-buster.html">Myth Buster</a></li><li><a href="../tanya-anonim.html">Tanya Anonim &amp; FAQ</a></li></ul></div>
+        <div><h2 class="footer-heading">Sumber &amp; Privasi</h2><ul class="footer-links"><li><a href="../sumber.html">Pusat Sumber Rujukan</a></li><li><a href="../tentang.html">Tentang SORA</a></li><li><a href="../tentang.html#privasi">Kebijakan Privasi Remaja</a></li><li><a href="../tentang.html#disclaimer">Disclaimer Medis</a></li></ul></div>
+        <div class="footer-safety"><h2 class="footer-heading">Bantuan &amp; Kontrol Data</h2><div class="footer-action-stack"><a href="../bantuan.html" class="btn btn-help">Butuh Bantuan?</a><button type="button" class="btn btn-secondary" data-clear-data>Hapus data saya</button><a href="https://www.google.com" class="btn btn-exit" data-quick-exit="https://www.google.com" rel="noopener noreferrer">Keluar Cepat</a></div></div>
+      </div>
+      <div class="container footer-bottom"><p>&copy; 2026 SORA — Ruang Aman Edukasi Kesehatan Remaja Indonesia.</p><p>Konten ditinjau berkala oleh tim dan peninjau kesehatan.</p></div>
+    </footer>
+
+    <div id="sora-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="sora-modal-title" aria-describedby="sora-modal-desc" hidden>
+      <div class="modal-panel" tabindex="-1"><div class="modal-header"><h2 id="sora-modal-title" class="modal-title">Pemberitahuan</h2><button type="button" class="modal-close" data-modal-close aria-label="Tutup jendela pemberitahuan">&times;</button></div><div id="sora-modal-desc" class="modal-body"></div><div id="sora-modal-help" class="modal-help-box" hidden><p>Jika kamu sedang berada dalam bahaya atau butuh teman bicara sekarang, jangan ragu untuk segera mencari pendampingan.</p><a href="../bantuan.html" class="btn btn-help">Butuh Bantuan?</a></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-modal-cancel hidden>Batal</button><button type="button" class="btn btn-primary" data-modal-confirm>Mengerti</button></div></div>
+    </div>
+
+    <script defer src="../js/site-config.js"></script>
+    <script defer src="../js/theme-state.js"></script>
+    <script defer src="../js/ui-shell.js"></script>
+    <script defer src="../js/article-detail.js"></script>
+  </body>
+</html>

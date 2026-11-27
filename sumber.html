@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="id" data-theme="all">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pusat Sumber Rujukan Resmi SORA — Kemenkes RI, WHO, IDAI, BKKBN, UNICEF Indonesia, dan Panduan Isi Piringku."
+    />
+    <title>Pusat Sumber Rujukan — SORA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('sora_user_state');
+          if (!raw) return;
+          var parsed = JSON.parse(raw);
+          if (parsed && (parsed.path === 'pink' || parsed.path === 'blue' || parsed.path === 'all')) {
+            document.documentElement.dataset.theme = parsed.path;
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <a href="index.html" class="brand-link" aria-label="Beranda SORA">
+            <span class="brand-mark" aria-hidden="true">S</span>
+            <span class="brand-text">
+              <span class="brand-name">SORA</span>
+              <span class="brand-tag">Ruang Aman Remaja</span>
+            </span>
+          </a>
+
+          <nav class="desktop-nav" aria-label="Navigasi utama">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Beranda</a></li>
+              <li><a href="artikel.html" class="nav-link">Artikel</a></li>
+              <li><a href="health-check.html" class="nav-link">Health Check</a></li>
+              <li><a href="myth-buster.html" class="nav-link">Myth Buster</a></li>
+              <li><a href="tanya-anonim.html" class="nav-link">Tanya Anonim &amp; FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-actions">
+          <div class="path-switcher desktop-only" role="group" aria-label="Pilih jalur topik">
+            <button type="button" class="path-pill" data-path-option="all" aria-pressed="false">Semua</button>
+            <button type="button" class="path-pill" data-path-option="pink" aria-pressed="false">Jalur Pink</button>
+            <button type="button" class="path-pill" data-path-option="blue" aria-pressed="false">Jalur Biru</button>
+          </div>
+
+          <div class="safety-actions">
+            <a href="bantuan.html" class="btn btn-help btn-compact">
+              <span aria-hidden="true">&#10084;&#65039;</span>
+              <span>Butuh Bantuan?</span>
+            </a>
+            <a
+              href="https://www.google.com"
+              class="btn btn-exit btn-compact"
+              data-quick-exit="https://www.google.com"
+              rel="noopener noreferrer"
+            >
+              <span>Keluar Cepat</span>
+            </a>
+          </div>
+
+          <button
+            type="button"
+            class="hamburger-btn"
+            id="mobile-menu-toggle"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+            aria-label="Buka menu navigasi"
+          >
+            <span class="hamburger-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav-drawer" class="mobile-drawer" hidden>
+        <div class="container mobile-drawer-inner">
+          <div class="mobile-path-section">
+            <p class="mobile-drawer-label">Pilih Jalur Topik</p>
+            <div class="path-switcher mobile-path-switcher" role="group" aria-label="Pilih jalur topik di menu">
+              <button type="button" class="path-pill" data-path-option="all" aria-pressed="false">Semua</button>
+              <button type="button" class="path-pill" data-path-option="pink" aria-pressed="false">Jalur Pink</button>
+              <button type="button" class="path-pill" data-path-option="blue" aria-pressed="false">Jalur Biru</button>
+            </div>
+          </div>
+
+          <nav aria-label="Navigasi seluler">
+            <ul class="mobile-nav-list">
+              <li><a href="index.html" class="mobile-nav-link">Beranda</a></li>
+              <li><a href="artikel.html" class="mobile-nav-link">Artikel</a></li>
+              <li><a href="health-check.html" class="mobile-nav-link">Health Check</a></li>
+              <li><a href="myth-buster.html" class="mobile-nav-link">Myth Buster</a></li>
+              <li><a href="tanya-anonim.html" class="mobile-nav-link">Tanya Anonim &amp; FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="editorial-kicker">Prinsip Berbasis Sumber</span>
+          <h1>Pusat Sumber Rujukan SORA</h1>
+          <p class="page-hero-lead">
+            Setiap klaim kesehatan di SORA dirancang untuk merujuk lembaga resmi nasional dan
+            internasional serta menyertakan tanggal tinjau pada masing-masing artikel dan kartu mitos.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container">
+          <div class="source-grid">
+            <article class="editorial-card">
+              <span class="editorial-kicker">Kementerian Kesehatan RI</span>
+              <h2>Kemenkes RI — Kesehatan Remaja &amp; PKPR</h2>
+              <p>
+                Rujukan utama kebijakan kesehatan anak usia sekolah dan remaja di Indonesia,
+                termasuk Pelayanan Kesehatan Peduli Remaja (PKPR), pencegahan anemia remaja putri,
+                bahaya rokok/vape/NAPZA, serta layanan kesehatan jiwa.
+              </p>
+              <p><strong>Artikel terkait:</strong></p>
+              <ul class="reference-list">
+                <li><a href="jalur/anemia-dan-zat-besi.html">Anemia pada Remaja Putri &amp; Zat Besi</a></li>
+                <li><a href="inti/bahaya-rokok-vape-napza.html">Fakta Rokok, Vape &amp; NAPZA</a></li>
+                <li><a href="inti/kesehatan-reproduksi-dasar.html">Kesehatan Reproduksi Dasar</a></li>
+              </ul>
+            </article>
+
+            <article class="editorial-card">
+              <span class="editorial-kicker">Kemenkes RI · Gizi</span>
+              <h2>Panduan Gizi Seimbang "Isi Piringku"</h2>
+              <p>
+                Pedoman porsi makan harian seimbang (makanan pokok, lauk pauk, sayur, buah),
+                pembiasaan minum air putih, dan aktivitas fisik harian tanpa fokus pada angka kalori
+                atau berat badan yang memicu kecemasan tubuh.
+              </p>
+              <p><strong>Artikel terkait:</strong></p>
+              <ul class="reference-list">
+                <li><a href="inti/gizi-seimbang-remaja.html">Gizi Seimbang Remaja Tanpa Hitung Kalori</a></li>
+                <li><a href="inti/aktivitas-fisik-harian.html">Aktivitas Fisik Harian</a></li>
+              </ul>
+            </article>
+
+            <article class="editorial-card">
+              <span class="editorial-kicker">World Health Organization</span>
+              <h2>WHO — Adolescent Health &amp; Mental Wellbeing</h2>
+              <p>
+                Standar global kesehatan remaja usia 10–19 tahun meliputi kebutuhan tidur remaja,
+                aktivitas fisik minimal, kesehatan mental, serta pencegahan penyalahgunaan zat dan
+                suplemen berbahaya.
+              </p>
+              <p><strong>Artikel terkait:</strong></p>
+              <ul class="reference-list">
+                <li><a href="inti/tidur-dan-screen-time.html">Tidur Cukup &amp; Atur Screen Time</a></li>
+                <li><a href="inti/kesehatan-mental-remaja.html">Merawat Kesehatan Mental Remaja</a></li>
+                <li><a href="jalur/olahraga-aman-suplemen-steroid.html">Olahraga Aman &amp; Risiko Steroid</a></li>
+              </ul>
+            </article>
+
+            <article class="editorial-card">
+              <span class="editorial-kicker">Ikatan Dokter Anak Indonesia</span>
+              <h2>IDAI — Tumbuh Kembang &amp; Kesehatan Remaja</h2>
+              <p>
+                Referensi klinis dokter anak Indonesia mengenai perkembangan pubertas perempuan dan
+                laki-laki, siklus menstruasi awal, nyeri haid, kebersihan organ reproduksi, dan
+                perawatan kulit remaja.
+              </p>
+              <p><strong>Artikel terkait:</strong></p>
+              <ul class="reference-list">
+                <li><a href="jalur/siklus-menstruasi-mitos.html">Siklus Menstruasi &amp; Mitosnya</a></li>
+                <li><a href="jalur/nyeri-haid-kapan-ke-dokter.html">Nyeri Haid &amp; Kapan ke Dokter</a></li>
+                <li><a href="jalur/pubertas-suara-mimpi-basah.html">Pubertas: Suara &amp; Mimpi Basah</a></li>
+              </ul>
+            </article>
+
+            <article class="editorial-card">
+              <span class="editorial-kicker">BKKBN</span>
+              <h2>BKKBN — Generasi Berencana (GenRe) &amp; PIK-R</h2>
+              <p>
+                Materi edukasi keterampilan hidup remaja, ketahanan diri terhadap tekanan pergaulan
+                sebaya (rokok, perundungan, tawuran), serta komunikasi sehat dengan orang tua dan
+                pendidik sebaya.
+              </p>
+              <p><strong>Artikel terkait:</strong></p>
+              <ul class="reference-list">
+                <li><a href="jalur/tekanan-pergaulan-rokok-tawuran.html">Menghadapi Tekanan Pergaulan</a></li>
+                <li><a href="jalur/kesehatan-mental-laki-laki.html">Kesehatan Mental Laki-Laki</a></li>
+              </ul>
+            </article>
+
+            <article class="editorial-card">
+              <span class="editorial-kicker">UNICEF Indonesia</span>
+              <h2>UNICEF Indonesia — Kebersihan Menstruasi &amp; Perlindungan Anak</h2>
+              <p>
+                Panduan Manajemen Kebersihan Menstruasi (MKM), citra tubuh positif tanpa
+                penghakiman, serta hak remaja atas lingkungan belajar dan ruang tumbuh yang aman.
+              </p>
+              <p><strong>Artikel terkait:</strong></p>
+              <ul class="reference-list">
+                <li><a href="jalur/kebersihan-kewanitaan-pembalut.html">Area Kewanitaan &amp; Pembalut</a></li>
+                <li><a href="jalur/body-image-gangguan-makan.html">Body Image &amp; Tanda Awal Gangguan Makan</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <span class="footer-mark" aria-hidden="true">S</span>
+            <strong class="footer-name">SORA</strong>
+          </div>
+          <p class="footer-desc">
+            Platform edukasi kesehatan remaja (12–18 tahun) yang tenang, tidak menghakimi, dan
+            berbasis sumber resmi. Tanpa login, tanpa pelacak iklan.
+          </p>
+          <p class="footer-note">
+            Informasi di SORA bersifat edukasi dan bukan pengganti diagnosis atau konsultasi medis.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Jelajah Fitur</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="artikel.html">Katalog Artikel</a></li>
+            <li><a href="health-check.html">Health Check Mini</a></li>
+            <li><a href="myth-buster.html">Myth Buster</a></li>
+            <li><a href="tanya-anonim.html">Tanya Anonim &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Sumber &amp; Privasi</h2>
+          <ul class="footer-links">
+            <li><a href="sumber.html">Pusat Sumber Rujukan</a></li>
+            <li><a href="tentang.html">Tentang SORA</a></li>
+            <li><a href="tentang.html#privasi">Kebijakan Privasi Remaja</a></li>
+            <li><a href="tentang.html#disclaimer">Disclaimer Medis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-safety">
+          <h2 class="footer-heading">Bantuan &amp; Kontrol Data</h2>
+          <div class="footer-action-stack">
+            <a href="bantuan.html" class="btn btn-help">Butuh Bantuan?</a>
+            <button type="button" class="btn btn-secondary" data-clear-data>Hapus data saya</button>
+            <a
+              href="https://www.google.com"
+              class="btn btn-exit"
+              data-quick-exit="https://www.google.com"
+              rel="noopener noreferrer"
+            >
+              Keluar Cepat
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SORA — Ruang Aman Edukasi Kesehatan Remaja Indonesia.</p>
+        <p>Konten ditinjau berkala oleh tim dan peninjau kesehatan.</p>
+      </div>
+    </footer>
+
+    <div
+      id="sora-modal"
+      class="modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="sora-modal-title"
+      aria-describedby="sora-modal-desc"
+      hidden
+    >
+      <div class="modal-panel" tabindex="-1">
+        <div class="modal-header">
+          <h2 id="sora-modal-title" class="modal-title">Pemberitahuan</h2>
+          <button type="button" class="modal-close" data-modal-close aria-label="Tutup jendela pemberitahuan">&times;</button>
+        </div>
+        <div id="sora-modal-desc" class="modal-body"></div>
+        <div id="sora-modal-help" class="modal-help-box" hidden>
+          <p>Jika kamu sedang berada dalam bahaya atau butuh teman bicara sekarang, jangan ragu untuk segera mencari pendampingan.</p>
+          <a href="bantuan.html" class="btn btn-help">Butuh Bantuan?</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-modal-cancel hidden>Batal</button>
+          <button type="button" class="btn btn-primary" data-modal-confirm>Mengerti</button>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/site-config.js"></script>
+    <script defer src="js/theme-state.js"></script>
+    <script defer src="js/ui-shell.js"></script>
+  </body>
+</html>
