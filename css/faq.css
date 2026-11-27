@@ -1,0 +1,23 @@
+/* faq.css – accordion styling */
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-subtle);
+  margin: 0;
+}
+.accordion-header {
+  background: var(--surface);
+  padding: var(--space-3);
+  cursor: pointer;
+  font-weight: 600;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-fast);
+  padding: 0 var(--space-3);
+}
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* enough for content */
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}

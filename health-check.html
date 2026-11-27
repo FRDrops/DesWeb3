@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id" data-theme="all">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Check – SORA</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/health-check.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <!-- reuse existing header via include or copy minimal nav -->
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Beranda SORA">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text"><span class="brand-name">SORA</span><span class="brand-tag">Ruang Aman
+            Remaja</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="health-check.html" class="nav-link is-active" aria-current="page">Health Check</a></li>
+          <li><a href="myth-buster.html" class="nav-link">Myth Buster</a></li>
+          <li><a href="tanya-anonim.html" class="nav-link">Tanya Anonim &amp; FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1" class="health-check-container">
+    <h1>Health Check</h1>
+    <div class="health-progress">
+      <div class="filled"></div>
+    </div>
+    <section id="question-section"></section>
+    <section id="result-section" class="health-result" hidden></section>
+    <div class="health-nav" hidden>
+      <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+      <button id="next-btn" class="btn btn-primary">Next</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <!-- reuse existing footer or minimal -->
+    <div class="container footer-grid">
+      <p>&copy; 2026 SORA. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="js/health-data.js"></script>
+  <script src="js/health-check.js"></script>
+</body>
+
+</html>
