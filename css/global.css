@@ -802,3 +802,7 @@ a:hover {
   color: var(--ink-muted);
   flex-grow: 1;
 }
+
+[hidden] {
+    display: none !important;
+}
